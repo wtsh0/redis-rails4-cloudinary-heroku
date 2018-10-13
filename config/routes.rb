@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :managers, :controllers => {
+  devise_for :managers, controllers: {
     sessions: 'managers/sessions',
     registrations: 'managers/registrations',
     passwords: 'managers/passwords'
@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     resources :articles
   end
 
-  root 'articles#index'
+  root 'managers/articles#index'
 end
