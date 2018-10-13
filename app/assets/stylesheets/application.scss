@@ -1,2 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@media (max-width: 768px){
+  .navbar-brand{
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+  }
+}
