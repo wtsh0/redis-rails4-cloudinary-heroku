@@ -25,7 +25,6 @@ gem 'dotenv-rails'
 gem 'gon'
 gem 'kakurenbo-puti'
 gem 'kaminari'
-gem 'less-rails'
 gem 'mini_magick'
 gem 'ransack'
 
