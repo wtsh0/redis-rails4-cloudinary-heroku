@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  details: 
+  published: false
+  published_at: 2018-10-13
+  week_pv: 1
+  monthly_pv: 1
+  total_pv: 1
+
+two:
+  title: MyString
+  details: 
+  published: false
+  published_at: 2018-10-13
+  week_pv: 1
+  monthly_pv: 1
+  total_pv: 1
