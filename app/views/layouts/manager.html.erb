@@ -11,10 +11,12 @@
   <%= favicon_link_tag() %>
 </head>
 <body>
+  <%= render 'managers/partials/navbar' %>
+  <div class="container">
+    <%= render 'layouts/pv_ranking' %>
+    <%= yield %>
+  </div>
 
-<%= render 'managers/partials/navbar' %>
-
-  <%= yield %>
 
 </body>
 </html>

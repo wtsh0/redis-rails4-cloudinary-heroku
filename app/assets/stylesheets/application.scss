@@ -1,10 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// 画面半分以下
 @media (max-width: 768px){
   .navbar-brand{
     transform: translateX(-50%);
     left: 50%;
     position: absolute;
   }
+}
+
+// デスクトップ
+@media (min-width: 769px){
+
 }
