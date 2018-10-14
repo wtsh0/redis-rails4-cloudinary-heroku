@@ -13,8 +13,13 @@
 <body>
   <%= render 'managers/partials/navbar' %>
   <div class="container">
-    <%= render 'layouts/pv_ranking' %>
-    <%= yield %>
+    <p class="text-center">ファイルの場所：<%= controller_path %>/<%= action_name %></p>
+    <main id="<%= for_css %>">
+      <div id="<%= action_name %>">
+        <%= render 'layouts/pv_ranking' %>
+        <%= yield %>
+      </div>
+    </main>
   </div>
 
 
