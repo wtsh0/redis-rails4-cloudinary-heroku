@@ -30,8 +30,9 @@ class Managers::ArticlesController < Managers::ManagersBase
   end
 
   def update
+    @article.check_published_at
     if @article.update(article_params)
-      redirect_to root_path, success: "#{@article.tile}が更新されました"
+      redirect_to root_path, success: "#{@article.title}が更新されました"
     else
       @submit = "変更する"
       render "edit"

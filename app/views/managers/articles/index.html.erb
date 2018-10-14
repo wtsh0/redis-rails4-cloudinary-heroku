@@ -25,12 +25,12 @@
     <tbody>
     <% @articles.each do |article| %>
       <tr class="<%= "warning" if article.published == false %>">
-        <td class="text-center"><%= article.created_at %></td>
+        <td class="text-center"><%= article.created_at.to_s(:time_short) %></td>
         <td class="text-center"></td>
         <td class="text-left"><%= article.title %></td>
         <td class="text-left"><%= article.details %></td>
-        <td class="text-center"><%= article.published_at %></td>
-        <td class="text-center"><%= article.updated_at %></td>
+        <td class="text-center"><%= check_published_at(article.published_at) %></td>
+        <td class="text-center"><%= article.updated_at.to_s(:time_short) %></td>
         <td class="text-center"><%= article_status(article.published) %></td>
         <td><%= link_to '変更', edit_managers_article_path(article.id), class: 'btn btn-default' %></td>
         <td><%= link_to '削除', managers_article_path(article.id), method: :delete, data: {confirm: "本当に削除しますか?"}, class: 'btn btn-default' %></td>
