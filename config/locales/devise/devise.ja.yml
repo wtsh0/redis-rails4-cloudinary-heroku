@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    attributes:
+      manager:
+        email: "メールアドレス"
+        password: "パスワード"
+  errors:
+    messages:
+      not_found: "は見つかりませんでした"
+
+  devise:
+    failure:
+      invalid: "メールアドレスかパスワードが違います"
+      not_found_in_database: "メールアドレスかパスワードが違います"
