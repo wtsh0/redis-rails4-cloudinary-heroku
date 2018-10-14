@@ -15,20 +15,25 @@ class Managers::ArticlesController < Managers::ManagersBase
 
   def create
     @article = Article.create(article_params)
+    @article.check_published_at
+    # binding.pry
     if @article.save
       redirect_to root_path, success: "#{@article.title}が登録されました"
     else
+      @submit = "登録する"
       render 'new'
     end
   end
 
   def edit
+    @submit = "変更する"
   end
 
   def update
     if @article.update(article_params)
       redirect_to root_path, success: "#{@article.tile}が更新されました"
     else
+      @submit = "変更する"
       render "edit"
     end
   end
@@ -44,6 +49,6 @@ class Managers::ArticlesController < Managers::ManagersBase
     end
 
     def article_params
-      params.permit(:article).permit(:title, :details, :published, :published_at, :week_pv, :monthly_pv, :total_pv)
+      params.require(:article).permit(:title, :details, :published, :published_at, :week_pv, :monthly_pv, :total_pv)
     end
 end

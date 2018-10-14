@@ -14,9 +14,13 @@
 
 		<div class="collapse navbar-collapse" id="navbarEexample">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">メニューＡ</a></li>
-				<li><a href="#">メニューＢ</a></li>
-				<li><a href="#">メニューＣ</a></li>
+				<li><%= link_to '記事を書く', new_managers_article_path, class: 'text-center' %></li>
+				<li><%= link_to 'トップページへ', root_path, class: 'text-center' %></li>
+				<% if manager_signed_in? %>
+				<li><%= link_to 'ログアウト', destroy_manager_session_path, class: 'text-center' %></li>
+				<% else %>
+				<li><%= link_to 'ログイン', new_manager_session_path, class: 'text-center' %></li>
+				<% end %>
 			</ul>
 		</div>
 	</div>

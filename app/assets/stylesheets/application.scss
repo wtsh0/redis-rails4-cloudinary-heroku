@@ -1,16 +1,52 @@
+@import url(https://fonts.googleapis.com/earlyaccess/mplus1p.css);
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 // 画面半分以下
 @media (max-width: 768px){
+  html{
+    font-size: 62.5%;
+  }
   .navbar-brand{
+    font-family: 'Mplus 1p';
     transform: translateX(-50%);
     left: 50%;
     position: absolute;
+  }
+
+  h1{
+    font-family: 'Mplus 1p';
+    font-size: 2rem;
+  }
+
+  h3{
+    font-family: 'Mplus 1p';
+    font-size: 1.5rem;
+    color: lightgrey;
+  }
+
+  .nav.navbar-nav > li > a:hover{
+    background-color: #FFFFE0;
+  }
+
+  .horizontally_arranged{
+    display: flex;
+    flex-direction: row;
   }
 }
 
 // デスクトップ
 @media (min-width: 769px){
+  html{
+    font-size: 62.5%;
+  }
+  .navbar-brand{
+    font-family: 'Mplus 1p';
+  }
 
+  h1{
+    font-family: 'Mplus 1p';
+    font-size: 2rem;
+    color: lightgrey;
+  }
 }

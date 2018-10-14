@@ -1,2 +1,12 @@
+<!--
 <h1>Managers::Articles#new</h1>
 <p>Find me in app/views/managers/articles/new.html.erb</p>
+-->
+<h1 class="text-center">記事を作る</h1>
+<div class="col-md-10 col-md-offset-1">
+  <%= form_for @article, url: managers_articles_path, method: :post do |f| %>
+
+    <%= render partial: 'article_form', locals: {f: f} %>
+
+  <% end %>
+</div>

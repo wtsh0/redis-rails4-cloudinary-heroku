@@ -14,7 +14,7 @@
   <%= render 'managers/partials/navbar' %>
   <div class="container">
     <p class="text-center">ファイルの場所：<%= controller_path %>/<%= action_name %></p>
-    <main id="<%= for_css %>">
+    <main id="<%= for_css %>" class="col-md-12">
       <div id="<%= action_name %>">
         <%= render 'layouts/pv_ranking' %>
         <%= yield %>
