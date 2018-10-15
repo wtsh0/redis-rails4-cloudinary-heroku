@@ -19,15 +19,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'devise'
+
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'carrierwave'
+gem 'cloudinary'
 gem 'dotenv-rails'
+gem 'devise'
 gem 'gon'
 gem 'kakurenbo-puti'
 gem 'kaminari'
 gem 'mini_magick'
 gem 'ransack'
+gem 'rmagick'
 
 group :development, :test do
   gem 'pry-byebug'
