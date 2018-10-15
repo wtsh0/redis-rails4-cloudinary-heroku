@@ -10,5 +10,10 @@ Rails.application.routes.draw do
     resources :articles
   end
 
-  root 'managers/articles#index'
+  namespace :public do
+    resources :articles, only: [:index, :show] do
+      get 'add_pv', on: :member
+    end
+  end
+  root 'public/articles#index'
 end
