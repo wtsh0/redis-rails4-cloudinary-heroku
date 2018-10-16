@@ -1,36 +1,17 @@
 <h1>Public::Articles#index</h1>
 <p>Find me in app/views/public/articles/index.html.erb</p>
 <%= render 'layouts/flash_messages' %>
-<h1 class="text-center">記事一覧</h1>
+
 <% if @articles.blank? %>
   <h3 class="text-center">まだ記事がありません</h3>
 <% else %>
-
 <!--ランキング表示-->
 <%= render 'public/partials/pv_ranking' %>
 
+<h1 class="text-center">記事一覧</h1>
 <div class="panel panel-default col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
   <% if @articles.present? %>
-    <% @articles.each do |article| %>
-      <% unless article.published == false %>
-        <div class="row">
-          <div class="col-xs-2 col-md-2">
-            <div class="yohaku">
-              <%= dispImage(article.image) %>
-            </div>
-          </div>
-          <div class="col-xs-10  col-md-10 margin-10">
-            <div class="yohaku align-left">
-              <strong><%= article.title %></strong><br />
-              <%= truncate(article.details, length: 20) %><br /><br />
-              更新日：<%= article.updated_at.to_s(:time_short) %>
-              <%= link_to '+PV', add_pv_public_article_path(article.id), class: "btn btn-danger align-left" %>
-              <%= link_to '詳細', public_article_path(article.id), class: "btn btn-default align-left" %>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+    <%= render partial: 'public/partials/articles', locals: {instances: @articles} %>
   <% else %>
     <div class="text-center">まだ記事はありません</div>
   <% end %>

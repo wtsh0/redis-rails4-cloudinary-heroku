@@ -6,6 +6,7 @@ class Managers::ArticlesController < Managers::ManagersBase
   end
 
   def show
+    @article = Article.find(params[:id])
   end
 
   def new
@@ -16,7 +17,6 @@ class Managers::ArticlesController < Managers::ManagersBase
   def create
     @article = Article.create(article_params)
     @article.check_published_at
-    # binding.pry
     if @article.save
       redirect_to managers_articles_path, success: "#{@article.title}が登録されました"
     else
@@ -31,7 +31,7 @@ class Managers::ArticlesController < Managers::ManagersBase
 
   def update
     @article.check_published_at
-    binding.pry
+    # binding.pry
     if @article.update(article_params)
       redirect_to managers_articles_path, success: "#{@article.title}が更新されました"
     else

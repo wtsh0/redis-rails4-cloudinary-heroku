@@ -1,5 +1,10 @@
+<h1 class="text-center">PV数ベスト3</h1>
 <div class="panel panel-default col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 ">
-  <div class="row">
-    
-  </div>
+  <% if @top3_rankings.present? %>
+    <%= render partial: 'public/partials/articles', locals: {instances: @top3_rankings} %>
+  <% else %>
+    <div class="text-center">
+      <strong>まだ誰も読んでません(m_ _m)</strong>
+    </div>
+  <% end %>
 </div>
