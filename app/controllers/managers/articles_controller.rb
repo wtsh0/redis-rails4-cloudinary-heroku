@@ -18,7 +18,7 @@ class Managers::ArticlesController < Managers::ManagersBase
     @article.check_published_at
     # binding.pry
     if @article.save
-      redirect_to root_path, success: "#{@article.title}が登録されました"
+      redirect_to managers_articles_path, success: "#{@article.title}が登録されました"
     else
       @submit = "登録する"
       render 'new'
@@ -31,8 +31,9 @@ class Managers::ArticlesController < Managers::ManagersBase
 
   def update
     @article.check_published_at
+    binding.pry
     if @article.update(article_params)
-      redirect_to root_path, success: "#{@article.title}が更新されました"
+      redirect_to managers_articles_path, success: "#{@article.title}が更新されました"
     else
       @submit = "変更する"
       render "edit"
@@ -41,7 +42,7 @@ class Managers::ArticlesController < Managers::ManagersBase
 
   def destroy
     @article.destroy
-    redirect_to root_path, success: "#{@article.title}を削除しました"
+    redirect_to managers_articles_path, success: "#{@article.title}を削除しました"
   end
 
   private
@@ -50,6 +51,6 @@ class Managers::ArticlesController < Managers::ManagersBase
     end
 
     def article_params
-      params.require(:article).permit(:title, :details, :published, :published_at, :week_pv, :monthly_pv, :total_pv)
+      params.require(:article).permit(:title, :image, :details, :published, :published_at, :week_pv, :monthly_pv, :total_pv)
     end
 end

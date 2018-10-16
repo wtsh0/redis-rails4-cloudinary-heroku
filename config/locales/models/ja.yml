@@ -4,3 +4,12 @@ ja:
         session:
           # email: "メールアドレス"
           # password: "パスワード"
+        article:
+          title: "見出し"
+          details: "詳細"
+          image: "画像"
+          published: "公開ステータス"
+          published_at: "公開日"
+          week_pv: "週間PV"
+          monthly_pv: "月間PV"
+          total_pv: "合計PV"

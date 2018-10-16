@@ -1,4 +1,5 @@
 class ArticleimageUploader < CarrierWave::Uploader::Base
+  include CarrierWave::RMagick
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
     include Cloudinary::CarrierWave
@@ -30,9 +31,9 @@ class ArticleimageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  version :standard do
-    process resize_to_fit: [400, 400, :center]
-  end
+  # version :standard do
+  #   process resize_to_fit: [400, 400, :center]
+  # end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

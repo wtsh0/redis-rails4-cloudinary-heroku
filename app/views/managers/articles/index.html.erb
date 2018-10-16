@@ -25,7 +25,13 @@
     <% @articles.each do |article| %>
       <tr class="<%= "warning" if article.published == false %>">
         <td class="text-center"><%= article.created_at.to_s(:time_short) %></td>
-        <td class="text-center"></td>
+        <td class="text-center">
+          <% if article.image.present? %>
+            <%= image_tag article.image.url, width: 100 %>
+          <% else %>
+            画像なし
+          <% end %>
+        </td>
         <td class="text-left"><%= truncate(article.title, length: 10) %></td>
         <td class="text-left"><%= truncate(article.details, length: 10) %></td>
         <td class="text-center"><%= check_published_at(article.published_at) %></td>
