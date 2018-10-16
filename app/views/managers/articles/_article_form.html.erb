@@ -10,7 +10,7 @@
   <div class="field col-md-12 col-sm-12">
   <%= f.label :image %><br />
   <% if @article.image.present? %>
-    <%= image_tag(@article.image.url(:standard), width: 100, height: 100) %>
+    <%= image_tag(@article.image.url, width: 100, height: 100) %>
   <% else %>
     <%= image_tag('/assets/no-image.png', width: 100, height: 100) %>
   <% end %>
