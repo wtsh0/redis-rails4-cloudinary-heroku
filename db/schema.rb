@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181013112937) do
+ActiveRecord::Schema.define(version: 20181016000848) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",        limit: 255
+    t.string   "image",        limit: 255
     t.string   "details",      limit: 255
     t.boolean  "published"
     t.date     "published_at"
