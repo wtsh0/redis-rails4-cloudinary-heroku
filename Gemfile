@@ -31,6 +31,7 @@ gem 'kakurenbo-puti'
 gem 'kaminari'
 gem 'mini_magick'
 gem 'ransack'
+gem 'redis'
 gem 'rmagick'
 
 group :development, :test do
