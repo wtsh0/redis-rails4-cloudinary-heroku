@@ -1,9 +1,9 @@
 class Public::ArticlesController < Public::PublicBase
   def index
     @articles = Article.all.reverse_order
-    ids = REDIS.zrevrangebyscore "articles", "+inf", 0, limit:[0, 2]
+    ids = REDIS.zrevrangebyscore "articles", "+inf", 0, limit:[0, 3]
     @top3_rankings = ids.map{|id| Article.find(id)}
-    binding.pry
+    # binding.pry
   end
 
   def show

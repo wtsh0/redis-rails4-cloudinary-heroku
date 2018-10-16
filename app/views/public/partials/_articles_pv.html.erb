@@ -1,0 +1,21 @@
+<% instances.each_with_index do |article, idx| %>
+  <% unless article.published == false %>
+    <div class="row">
+      <div class="col-xs-2 col-md-2">
+        <div class="yohaku">
+          <%= dispImage(article.image) %>
+        </div>
+      </div>
+      <div class="col-xs-10  col-md-10 margin-10">
+        <div class="yohaku align-left">
+          <strong><%= idx + 1 %>位： <%= article.count_pv %>PV</strong><br>
+          <h4><%= article.title %></h4>
+          <%= truncate(article.details, length: 30) %><br />
+          更新日：<%= article.updated_at.to_s(:time_short) %>
+          <%= link_to '+PV', add_pv_public_article_path(article.id), class: "btn btn-danger align-left" %>
+          <%= link_to '詳細', public_article_path(article.id), class: "btn btn-default align-left" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
