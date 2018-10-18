@@ -5,10 +5,6 @@ class Managers::ArticlesController < Managers::ManagersBase
     @articles = Article.all.reverse_order
   end
 
-  def show
-    @article = Article.find(params[:id])
-  end
-
   def new
     @article = Article.new
     @submit = "登録する"
@@ -53,6 +49,6 @@ class Managers::ArticlesController < Managers::ManagersBase
     end
 
     def article_params
-      params.require(:article).permit(:title, :image, :details, :published, :published_at, :week_pv, :monthly_pv, :total_pv)
+      params.require(:article).permit(:title, :picture, :details, :published, :published_at, :week_pv, :monthly_pv, :total_pv)
     end
 end

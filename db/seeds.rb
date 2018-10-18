@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+today = Time.now()
+
+Manager.create!(
+  email: "1@gmail.com",
+  password: "asdf1234"
+  created_at: today,
+  confirmation_sent_at: today.ago(1.days),
+  confirmed_at: today.ago(1.days).since(3.minutes),
+  last_sign_in_at: today.ago(1.days).since(3.minutes)
+)
+

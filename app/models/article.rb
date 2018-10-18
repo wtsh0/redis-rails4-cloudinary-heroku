@@ -2,7 +2,7 @@ class Article < ActiveRecord::Base
   # validation
   # 見出し
   validates :title, presence: true, length:{maximum: 32}
-  validates :image, presence: true
+  validates :picture, presence: true
   validates :details, presence: true
   validates :published_at, presence: true, if: :published?
 
