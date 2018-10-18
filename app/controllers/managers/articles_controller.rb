@@ -42,6 +42,8 @@ class Managers::ArticlesController < Managers::ManagersBase
 
   def destroy
     @article.destroy
+    # REDIS.zincrby "articles", 1, @article.id
+    REDIS.zrem "articles", @article.id
     redirect_to managers_articles_path, success: "#{@article.title}を削除しました"
   end
 
