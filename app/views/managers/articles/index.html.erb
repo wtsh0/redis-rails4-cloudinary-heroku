@@ -5,7 +5,10 @@
 <%= render 'layouts/flash_messages' %>
 <h1 class="text-center">記事一覧</h1>
 <% if @articles.blank? %>
-  <h3 class="text-center">まだ記事がありません</h3>
+  <p><h3 class="text-center">まだ記事がありません</h3></p>
+  <div class="text-center">
+    <%= link_to '記事を書く', new_managers_article_path, class: 'btn btn-primary' %>
+  </div>
 <% else %>
 
 <div>
