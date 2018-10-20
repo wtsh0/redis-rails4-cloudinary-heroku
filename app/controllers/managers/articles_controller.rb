@@ -11,7 +11,9 @@ class Managers::ArticlesController < Managers::ManagersBase
   end
 
   def create
+    # @article = Article.new(article_params)
     @article = Article.create(article_params)
+    # binding.pry
     @article.check_published_at
     if @article.save
       redirect_to managers_articles_path, success: "#{@article.title}が登録されました"

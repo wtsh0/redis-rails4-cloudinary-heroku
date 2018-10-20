@@ -4,7 +4,7 @@
       <h1><%= @article.title %></h1><br />
       <hr>
       <div>更新日：<%= @article.updated_at.to_s(:time_short) %></div>
-      <%= dispImage(@article.picture) %>
+      <%= dispImage(@article) %>
     </div>
   </div>
   <div class="col-xs-10  col-md-10">
