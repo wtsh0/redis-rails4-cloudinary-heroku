@@ -30,7 +30,7 @@
         <td class="text-center"><%= article.created_at.to_s(:time_short) %></td>
         <td class="text-center">
           <% if article.picture.present? %>
-            <%= image_tag article.picture.url, width: 100 %>
+            <%= cl_image_tag(article.picture_url(:standard), width: 100) %>
           <% else %>
             画像なし
           <% end %>

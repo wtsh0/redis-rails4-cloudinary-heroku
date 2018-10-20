@@ -7,8 +7,8 @@ class Article < ActiveRecord::Base
   validates :published_at, presence: true, if: :published?
 
   # image_uploader(cloudinary)
-  # attr_accessor :image
-  mount_uploader :image, ArticleimageUploader
+  attr_accessor :picture
+  mount_uploader :picture, ArticleimageUploader
 
   # validation condition
   def published?

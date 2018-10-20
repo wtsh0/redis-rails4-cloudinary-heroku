@@ -8,17 +8,21 @@ class ArticleimageUploader < CarrierWave::Uploader::Base
     storage :file
   end
 
-   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  process :tags =>['picture']
+  #  def store_dir
+  #   "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  # end
+  version :standard do
+    process :resize_to_fill => [400, 400, :center]
   end
-
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_whitelist
     %w(jpg jpeg gif png)
   end
 
-  def article_id
-    Article.id
-  end
+  # def public_id
+  #   # binding.pry
+  #   return article.id
+  # end
 end
