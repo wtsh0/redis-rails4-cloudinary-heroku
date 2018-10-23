@@ -3,7 +3,11 @@
 <p>Find me in app/views/managers/articles/index.html.erb</p>
 -->
 <%= render 'layouts/flash_messages' %>
-<h1 class="text-center">記事一覧</h1>
+
+<div class="text-center">
+  <h1>記事一覧</h1>
+</div>
+
 <% if @articles.blank? %>
   <p><h3 class="text-center">まだ記事がありません</h3></p>
   <div class="text-center">
