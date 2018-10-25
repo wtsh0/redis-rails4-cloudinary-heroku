@@ -1,18 +1,3 @@
-== README
-
-* Ruby version
-2.3.5
-* Rails version
-4.2.10
-
-* Database creation
-mysql
-
-* Services (job queues, cache servers, search engines, etc.)
-redis
-* Deployment instructions
-heroku(stack-16), cloudinary
-
 `Redis`をつかった簡単なアプリケーションをさくせいしました。
 
 下記のURLでお試しできます
@@ -20,3 +5,9 @@ heroku(stack-16), cloudinary
 - パスワード：　asdfghjk
 
 
+* Ruby: 2.3.5
+* Rails: 4.2.10
+* Database: mysql
+* redis: redis(3.2)
+* heroku: stack-16
+* cloudinary
