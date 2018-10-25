@@ -24,3 +24,5 @@ ja:
               blank: を選択してください
             details:
               blank: を入力してください
+            published_at:
+              # blank: 

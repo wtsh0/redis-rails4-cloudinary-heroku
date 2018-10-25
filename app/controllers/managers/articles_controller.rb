@@ -1,5 +1,5 @@
 class Managers::ArticlesController < Managers::ManagersBase
-  before_action :set_article, except: [:index, :new, :create]
+  before_action :set_article,  only: [:show, :edit, :update, :destroy]
 
   def index
     @articles = Article.all.reverse_order
@@ -28,7 +28,10 @@ class Managers::ArticlesController < Managers::ManagersBase
 
   def update
     @article.check_published_at
+    # binding.pry
     if @article.update(article_params)
+    # if @article.save
+      # binding.pry
       redirect_to managers_articles_path, success: "#{@article.title}が更新されました"
     else
       @submit = "変更する"

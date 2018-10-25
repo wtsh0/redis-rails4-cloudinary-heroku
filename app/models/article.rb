@@ -4,7 +4,7 @@ class Article < ActiveRecord::Base
   validates :title, presence: true, length:{maximum: 32}
   validates :picture, presence: true
   validates :details, presence: true
-  validates :published_at, presence: true, if: :published?
+  # validates :published_at, presence: true, if: :published?
 
   # image_uploader(cloudinary)
   attr_accessor :picture
@@ -16,7 +16,15 @@ class Article < ActiveRecord::Base
   end
 
   def check_published_at
-    self.published == true ? self.published_at = Time.now : self.published_at = ""
+    if self.published == true
+      self.published_at = Time.now
+    else
+      if !self.published_at.blank?
+        self.published_at = nil
+        # binding.pry
+      end
+    end
+    # binding.pry
   end
 
   def count_pv

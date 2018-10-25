@@ -1,4 +1,23 @@
+
 <h1>Public::Articles#show</h1>
 <p>Find me in app/views/public/articles/show.html.erb</p>
+<div class="col-md-10 col-md-offset-1">
+  <div class="text-center">
+    <%= cl_image_tag(@article.picture_url) %>
+  </div>
+  <div class="text-left">
+    <h3><%= @article.title %></h3><br>
+    <div class="text-center">
+      投稿日： <%= @article.published_at %>　更新日： <%= @article.updated_at.to_s(:time_short) %>
+    </div>
+    <hr>
+  </div>
+  <div class="text-left">
+    <%= simple_format(@article.details) %>
+  </div>
+  <div class="text-center">
+    <%= link_to '記事一覧へ', public_articles_path, class: 'btn btn-default' %>
+  </div>
+</div>
 
-<%= render 'public/partials/article' %>
+

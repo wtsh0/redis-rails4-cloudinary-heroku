@@ -4,13 +4,13 @@
       <h1><%= @article.title %></h1><br />
       <hr>
       <div>更新日：<%= @article.updated_at.to_s(:time_short) %></div>
-      <%= dispImage(@article) %>
+      <%= dispImage(@article.picture) %>
     </div>
   </div>
   <div class="col-xs-10  col-md-10">
     <p>
       <div class="text-left">
-        <%= @article.details, length: 20) %><br /><br />
+        <%= @article.details, length: 20 %><br /><br />
       </div>
     </p>
     <p>

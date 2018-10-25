@@ -1,0 +1,24 @@
+<h1>Public::Articles#index</h1>
+<p>Find me in app/views/public/articles/index.html.erb</p>
+<%= render 'layouts/flash_messages' %>
+
+<% if @articles.blank? %>
+  <div class="text-center">
+    <h3 class="text-center">まだ記事がありません</h3>
+  </div>
+<% else %>
+<!--ランキング表示-->
+<%= render 'public/partials/pv_ranking' %>
+<div class="col-md-10 col-md-offset-1">
+  <div class="text-center">
+    <h1>記事一覧</h1>
+  </div>
+  <div class="panel panel-default col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+    <% if @articles.present? %>
+      <%= render partial: 'public/partials/articles', locals: {instances: @articles} %>
+    <% else %>
+      <div class="text-center">まだ記事はありません</div>
+    <% end %>
+  </div>
+</div>
+<% end %>

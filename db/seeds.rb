@@ -8,7 +8,7 @@
 today = Time.now()
 
 Manager.create!(
-  email: "1@gmail.com",
+  email: "2@gmail.com",
   password: "asdfghjk",
   created_at: today,
   updated_at: today,
