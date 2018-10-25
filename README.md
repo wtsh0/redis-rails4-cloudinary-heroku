@@ -1,11 +1,4 @@
-やり残していること
-- デプロイ
 == README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
 
 * Ruby version
 2.3.5
@@ -18,6 +11,12 @@ mysql
 * Services (job queues, cache servers, search engines, etc.)
 redis
 * Deployment instructions
-heroku, cloudinary
+heroku(stack-16), cloudinary
+
+`Redis`をつかった簡単なアプリケーションをさくせいしました。
+
+下記のURLでお試しできます
+- メールアドレス： 2@gmail.com
+- パスワード：　asdfghjk
 
 
