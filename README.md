@@ -1,6 +1,7 @@
 `Redis`をつかった簡単なアプリケーションをさくせいしました。
 
-下記のURLでお試しできます
+下記のURLでお試しできます<br>
+https://redis-rails4-cloudinary-heroku.herokuapp.com/
 - メールアドレス： 2@gmail.com
 - パスワード：　asdfghjk
 
