@@ -15,4 +15,5 @@
 /public/uploads/tmp/*
 
 /.env
-/.envrc
+# /.envrc
+/dump.rdb

@@ -8,14 +8,14 @@
 				<span class="icon-bar"></span>
 			</button>
 			<%= link_to(managers_articles_path, class: 'navbar-brand text-center') do %>
-				PVランキング
+				PVランキング(管理者)
 			<% end %>
 		</div>
 
 		<div class="collapse navbar-collapse" id="navbarEexample">
 			<ul class="nav navbar-nav">
 				<li><%= link_to '記事を書く', new_managers_article_path, class: 'text-center' %></li>
-				<li><%= link_to '管理者ページへ', managers_articles_path, class: 'text-center' %></li>
+				<li><%= link_to 'ユーザーページへ', public_articles_path, class: 'text-center' %></li>
 				<% if manager_signed_in? %>
 				<li><%= link_to 'ログアウト', destroy_manager_session_path, class: 'text-center' %></li>
 				<% else %>

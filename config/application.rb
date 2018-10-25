@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-# Dotenv.load
+Dotenv.load
 
 module RedisRails4CloudinaryHeroku
   class Application < Rails::Application
