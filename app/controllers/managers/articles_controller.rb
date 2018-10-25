@@ -27,11 +27,9 @@ class Managers::ArticlesController < Managers::ManagersBase
   end
 
   def update
+    @article.update(article_params)
     @article.check_published_at
-    # binding.pry
-    if @article.update(article_params)
-    # if @article.save
-      # binding.pry
+    if @article.save
       redirect_to managers_articles_path, success: "#{@article.title}が更新されました"
     else
       @submit = "変更する"

@@ -1,5 +1,4 @@
 やり残していること
-- エラーメッセージの日本語化
 - デプロイ
 == README
 
@@ -12,7 +11,6 @@ Things you may want to cover:
 2.3.5
 * Rails version
 4.2.10
-* System dependencies
 
 * Database creation
 mysql
@@ -20,7 +18,6 @@ mysql
 * Services (job queues, cache servers, search engines, etc.)
 redis
 * Deployment instructions
-heroku
-* ...
+heroku, cloudinary
 
 
