@@ -1,2 +1,24 @@
-<h1>Managers::Articles#show</h1>
-<p>Find me in app/views/managers/articles/show.html.erb</p>
+<%# <h1>Managers::Articles#show</h1>
+<p>Find me in app/views/managers/articles/show.html.erb</p> %>
+<div class="col-md-10 col-md-offset-1">
+  <div class="text-center">
+    <%= cl_image_tag(@article.picture_url) %>
+  </div>
+  <div class="text-left">
+    <h3><%= @article.title %></h3><br>
+    <div class="text-center">
+      投稿日： <%= @article.published_at %>　更新日： <%= @article.updated_at.to_s(:time_short) %>
+    </div>
+    <hr>
+  </div>
+  <div class="text-left">
+    <%= simple_format(@article.details) %>
+  </div>
+  <div class="text-center">
+    <%= link_to '記事一覧へ', managers_articles_path, class: 'btn btn-default' %><br>
+    <%= link_to '編集する', edit_managers_article_path(@article.id), class: 'btn btn-default' %><br>
+    <%= link_to '削除', managers_article_path(@article.id), method: :delete, data: {confirm: "本当に削除しますか?"}, class: 'btn btn-default' %>
+  </div>
+</div>
+
+
