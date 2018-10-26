@@ -2,6 +2,8 @@
 
 下記のURLでお試しできます<br>
 https://redis-rails4-cloudinary-heroku.herokuapp.com/
+
+管理者側のログインデータはこちらになります
 - メールアドレス： 2@gmail.com
 - パスワード：　asdfghjk
 

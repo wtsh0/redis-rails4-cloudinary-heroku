@@ -3,8 +3,10 @@
 <%= render 'layouts/flash_messages' %>
 
 <% if @articles.blank? %>
-  <div class="text-center">
-    <h3 class="text-center">まだ記事がありません</h3>
+  <div class="col-md-10 col-md-offset-1">
+    <div class="text-center">
+      <h3>まだ記事がありません</h3>
+    </div>
   </div>
 <% else %>
 <!--ランキング表示-->
